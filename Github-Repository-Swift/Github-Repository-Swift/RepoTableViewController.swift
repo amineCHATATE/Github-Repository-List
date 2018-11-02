@@ -45,15 +45,6 @@ class RepoTableViewController: UITableViewController {
     func stopActivityIndicator() {
         self.activityIndicator.stopAnimating()
     }
-    
-    /*func imageIsNullOrNot(imageName : UIImage?)-> Bool{
-     let size = CGSize(width: 0, height: 0)
-     if let image = imageName {
-     return image.size.width == size.width || image.size.height == size.height ? false : true
-     } else {
-     return false;
-     }
-     }*/
 }
 
 extension RepoTableViewController{
@@ -77,17 +68,6 @@ extension RepoTableViewController{
         
         cell.avatar.sd_setImage(with: self.arrayRepository[indexPath.row].owner.avatar_url, completed: nil)
         
-        /*DispatchQueue.main.async {
-         let data = try? Data(contentsOf: self.arrayRepository[indexPath.row].owner.avatar_url)
-         if let imageData = data {
-         let image = UIImage(data: imageData)
-         if (self.imageIsNullOrNot(imageName: image)) {
-         cell.avatar.image = image
-         } else {
-         cell.avatar.image = UIImage(named: "vide")
-         }
-         }
-         }*/
         return cell
     }
     
@@ -109,8 +89,8 @@ extension RepoTableViewController: GetDataDelegate{
         DispatchQueue.main.async {
             for repository in repositories{
                 self.arrayRepository.append(repository)
-                self.tableView.reloadData()
             }
+            self.tableView.reloadData()
         }
         self.stopActivityIndicator()
     }
