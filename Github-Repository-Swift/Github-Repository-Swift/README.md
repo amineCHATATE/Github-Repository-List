@@ -51,11 +51,10 @@ struct Owner: Codable {
 ```
 
 ## Getting images
-If we use only the function :
+The scrolling becomes slow, due to the time required to download, which exceeds 16 ms, which is recommended to maintain scrolling at a normal speed. To solve this problem, we can use "SDWebImage Library", like this :
 ```swift
 cell.avatar.sd_setImage(with: self.arrayRepository[indexPath.row].owner.avatar_url, completed: nil)
 ```
-the scrolling becomes slow, due to the time required to download, which exceeds 16 ms, which is recommended to maintain scrolling at a normal speed. To solve this problem, we can use "SDWebImage Library"
 
 ## Animation
 We animate the display of row by modifying the transparent alpha property (value equal to 0) to opaque (value equal to 1) :
