@@ -54,7 +54,7 @@ If we use only the function :
 ```swift
 Data(contentsOf: URL)
 ```
-the scrolling becomes slow, due to the time required to download, which exceeds 16 seconds, which is recommended to maintain scrolling at a normal speed. To solve this problem, we can use "SDWebImage Library" :
+the scrolling becomes slow, due to the time required to download, which exceeds 16 ms, which is recommended to maintain scrolling at a normal speed. To solve this problem, we can use "SDWebImage Library" :
 
 ```swift
 cell.avatar.sd_setImage(with: self.arrayRepository[indexPath.row].owner.avatar_url, completed: nil)
