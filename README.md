@@ -1,4 +1,4 @@
-# Github-Repository-Swift
+# Github-Repository-List
 The app use the SDWebImage Library.
 To open the project choose the file "mobile-coding-challenge-SWIFT.xcworkspace"
 
