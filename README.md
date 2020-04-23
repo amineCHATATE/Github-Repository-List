@@ -1,4 +1,6 @@
 # Github-Repository-List
+Github-Repository-List is an iOS app witch list dynamicly a list of Github Repository.
+
 The app use the SDWebImage Library.
 To open the project choose the file "mobile-coding-challenge-SWIFT.xcworkspace"
 
